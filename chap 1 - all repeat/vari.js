@@ -383,3 +383,61 @@
 // dipol2(10000);
 
 
+//itaration with forEach loop
+
+const  myArray = [ "Dipol", "chomok", "hablu", "gablu", "reason", "him", "her"];
+
+myArray.forEach(companyInfo);
+
+function companyInfo (firstValue, secondValue, thirdValue){
+   console.log(firstValue,secondValue, thirdValue);
+    
+}
+
+// map method 
+
+const array1 = [2, 3, 4, 5, 6, 7, 8, 9];
+
+let array2 = array1.map(function(value){
+    return value * 2;
+    
+})
+
+console.log(array2);
+
+
+// map method2
+
+const callBack = [8,7,6,5,4,3,2];
+let newArray = callBack.map(function(value){
+    return value * 3;
+    
+})
+console.log(newArray);
+
+// filter method 
+
+let filterMethod = [2,3,4,5,6,78,34,57,78,4,1,2,4];
+
+const filterElement = filterMethod.filter(filterFunction);
+
+function filterFunction (value){
+    return value > 20
+}
+console.log(filterElement);
+// thiss keyword
+
+const person = {
+    firstName : "dipol",
+    lastName : "das",
+    age : 20 ,
+    adress : "mymensingh",
+    fullName : function (){
+        return this.firstName + " " + this.lastName;
+    }
+
+}
+
+person.firstName = "Dipol";
+person.lastName = "Das";
+console.log(person.fullName());
